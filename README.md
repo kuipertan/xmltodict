@@ -1,16 +1,27 @@
 # 免安装使用
 copy xmltodict.pyc to project dir
+
 code:
+
 import xmltodict,json
 
+
 f = open('sample.xml')
+
 content = f.read()
+
 f.close()
+
 print content
+
 js = xmltodict.parse(content)
+
 print js   # collections.unorderdict类型
+
 jo = json.dumps(js)
+
 dict_obj = json.loads(jo)
+
 
 # xmltodict
 
