@@ -1,3 +1,17 @@
+# 免安装使用
+copy xmltodict.pyc to project dir
+code:
+import xmltodict,json
+
+f = open('sample.xml')
+content = f.read()
+f.close()
+print content
+js = xmltodict.parse(content)
+print js   # collections.unorderdict类型
+jo = json.dumps(js)
+dict_obj = json.loads(jo)
+
 # xmltodict
 
 `xmltodict` is a Python module that makes working with XML feel like you are working with [JSON](http://docs.python.org/library/json.html), as in this ["spec"](http://www.xml.com/pub/a/2006/05/31/converting-between-xml-and-json.html):
